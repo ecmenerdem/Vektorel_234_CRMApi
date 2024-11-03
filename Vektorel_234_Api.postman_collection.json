@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "e4adfbb5-1d48-4636-a218-2963d9921bbe",
+		"name": "Vektorel_234_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5258/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5258",
+					"path": [
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Groups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJBZCI6IkVjbWVuIiwiU295YWQiOiJFcmRlbSIsIkt1bGxhbmljaUFkaSI6ImVjbWVuIiwiZXhwIjoxNzMwMjA2MDQxLCJpc3MiOiJodHRwczovL2FzZGFzZGRhc2Rhcy5jb20ifQ.79yqIi2MjlXu6aSf02Tt6-gIGBCxQ2UIaZBdoAiX3xE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"GrupAdi\": \"Grafik Tasarım\",\r\n  \"Comments\": \"\",\r\n  \"IsActive\": true,\r\n  \"IsDeleted\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/Group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"Group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Groups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJBZCI6IkVjbWVuIiwiU295YWQiOiJFcmRlbSIsIkt1bGxhbmljaUFkaSI6ImVjbWVuIiwiZXhwIjoxNzMwMjA2MDQxLCJpc3MiOiJodHRwczovL2FzZGFzZGRhc2Rhcy5jb20ifQ.79yqIi2MjlXu6aSf02Tt6-gIGBCxQ2UIaZBdoAiX3xE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/Groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"Groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJBZCI6IkVjbWVuIiwiU295YWQiOiJFcmRlbSIsIkt1bGxhbmljaUFkaSI6ImVjbWVuIiwiZXhwIjoxNzMwMjA2MDQxLCJpc3MiOiJodHRwczovL2FzZGFzZGRhc2Rhcy5jb20ifQ.79yqIi2MjlXu6aSf02Tt6-gIGBCxQ2UIaZBdoAiX3xE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/Users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/User/fc054270-3611-4130-b791-609c8f068642",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"User",
+						"fc054270-3611-4130-b791-609c8f068642"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"KullaniciAdi\": \"ecmen\",\r\n  \"Sifre\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJBZCI6IkVjbWVuIiwiU295YWQiOiJFcmRlbSIsIkt1bGxhbmljaUFkaSI6ImVjbWVuIiwiZXhwIjoyNjc3MjMyNDQ5LCJpc3MiOiJodHRwczovL2FzZGFzZGRhc2Rhcy5jb20ifQ.A3p0GeQsvPfvVdMhqCZa0rquUZ0poyHH92Hb2XoZgc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/Products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/Product/9fee8014-d304-4a66-aa2e-426de4c77e37",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJBZCI6IkVjbWVuIiwiU295YWQiOiJFcmRlbSIsIkt1bGxhbmljaUFkaSI6ImVjbWVuIiwiZXhwIjoyNjc3MjMyNDQ5LCJpc3MiOiJodHRwczovL2FzZGFzZGRhc2Rhcy5jb20ifQ.A3p0GeQsvPfvVdMhqCZa0rquUZ0poyHH92Hb2XoZgc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/Product/9fee8014-d304-4a66-aa2e-426de4c77e37",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"Product",
+						"9fee8014-d304-4a66-aa2e-426de4c77e37"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
