@@ -88,7 +88,7 @@ namespace CRM.Api.Controllers
             Sonuc<bool> sonuc = new Sonuc<bool>();
 
             UpdateProductValidator updateProductValidator = new UpdateProductValidator();
-
+            /*sddsd*/
 
             if (updateProductValidator.Validate(productDTO).IsValid)
             {
